@@ -27,6 +27,7 @@ namespace MyForstWebApplication.Controllers
         [HttpPut("update")]
         public IActionResult Update([FromQuery] DateTime date, [FromQuery] int temperatureC)
         {
+            _weatherForecastHolder.Update(date, temperatureC);
             return Ok();
         }
 
